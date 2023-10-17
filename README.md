@@ -1,3 +1,31 @@
+# Web Directory API
+
+This is a Restful API for a web directory. It allows users to browse, submit, and vote on websites.
+
+## Installation
+
+1. Clone the repository:
+
+   git clone https://github.com/ranjot1144/directory_api.git
+
+To execute the file
+    1.  Open Postman.
+
+    2.  Create a new request or use an existing one.
+
+    3.  Set the request type to POST or DELETE based on the specific route you want to access (e.g., /websites/approve/{id} or /websites/remove/{id}).
+
+    4.  Set the URL to the full endpoint, including the {id} parameter.
+
+    5.  Add the Authorization header to your request to include the authentication token. You should add a header like this:
+
+            Key: Authorization
+            Value: Bearer YOUR_AUTH_TOKEN (Once login you will get the token)
+
+    6.  Replace YOUR_AUTH_TOKEN with the actual authentication token you've obtained during login.
+
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">
@@ -64,3 +92,7 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+
+
