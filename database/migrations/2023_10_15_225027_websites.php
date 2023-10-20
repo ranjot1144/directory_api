@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('title');
-            $table->index('url');
+            $table->string('url');
             $table->string('description');
             $table->boolean('approved')->default(false); // For admin approval
             $table->timestamps();
