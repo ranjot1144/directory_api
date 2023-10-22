@@ -10,7 +10,7 @@ class Website extends Model
     use HasFactory;
 
     protected $fillable = [
-        'user_id', // Add this line
+        'user_id',
         'name',
         'title',
         'url',

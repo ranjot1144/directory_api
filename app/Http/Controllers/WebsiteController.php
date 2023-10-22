@@ -106,6 +106,12 @@ class WebsiteController extends Controller
 
     public function delete(Request $request, Website $website)
     {
+        $website = Website::find($id);
+
+        if (!$website) {
+            return response()->json(['message' => 'Website not found'], 404);
+        }
+
         if (Gate::allows('delete-website', $website)) {
             // User is authorized to delete the website
             $website->delete(); // Delete the website

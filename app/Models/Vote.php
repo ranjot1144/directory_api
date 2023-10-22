@@ -20,4 +20,19 @@ class Vote extends Model
     {
         return $this->belongsTo(User::class);
     }
+
+    public static function getValidationRules($websiteId, $userId): array
+    {
+        return [
+            'user_id' => [
+                'required',
+                Rule::unique('votes', 'user_id')
+                    ->where(function ($query) use ($websiteId) {
+                        return $query->where('website_id', $websiteId);
+                    })
+                    ->ignore($userId, 'user_id')
+            ]
+        ];
+    }
+    
 }

@@ -10,7 +10,6 @@ use Illuminate\Support\Facades\Hash;
 class UserController extends Controller
 {
     //
-
     public function register(Request $request)
     {
         // Validate the incoming request   
@@ -27,7 +26,7 @@ class UserController extends Controller
             'password' => Hash::make($request->input('password')),
         ]);
 
-        return response()->json(['message' => 'User ' .$user->name. ' registered successfully'], 201);
+        return response()->json(['message' => 'User "' .$user->name. '" registered successfully'], 201);
     }
 
     public function login(Request $request)
@@ -61,7 +60,6 @@ class UserController extends Controller
             });
             return response()->json(['message' => 'Logged out']);
         }
-
         return response()->json(['message' => 'Logged out']);
     }
 }
